@@ -3,22 +3,25 @@
 }
 
 :root {
-  --bg: #020617;
-  --bg-card: rgba(15, 23, 42, 0.9);
-  --border-subtle: rgba(148, 163, 184, 0.25);
+  --bg: #05060a;
+  --bg-card: #0b0d12;
+  --border-subtle: rgba(248, 113, 113, 0.22);
   --fg: #e5e7eb;
   --fg-muted: #9ca3af;
-  --accent: #38bdf8;
-  --accent-soft: rgba(56, 189, 248, 0.18);
+  --accent: #f97373;
+  --accent-soft: rgba(248, 113, 113, 0.18);
   --pill-bg: rgba(15, 23, 42, 0.95);
-  --shadow-soft: 0 24px 60px rgba(15, 23, 42, 0.95);
+  --shadow-soft: 0 26px 70px rgba(0, 0, 0, 0.95);
 }
 
 body {
   margin: 0;
   padding: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
-  background: radial-gradient(circle at top left, #0f172a 0, #020617 50%, #000 100%);
+  background:
+    radial-gradient(circle at top left, #1f2937 0, transparent 55%),
+    radial-gradient(circle at bottom right, #111827 0, transparent 55%),
+    linear-gradient(180deg, #020617, #05060a 55%, #020617 100%);
   color: var(--fg);
   min-height: 100vh;
 }
@@ -28,8 +31,8 @@ body {
   top: 0;
   z-index: 10;
   backdrop-filter: blur(24px);
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.98), rgba(8, 47, 73, 0.96));
-  border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.98), rgba(127, 29, 29, 0.96));
+  border-bottom: 1px solid rgba(248, 113, 113, 0.4);
 }
 
 .header-inner {
@@ -53,8 +56,8 @@ body {
   height: 56px;
   border-radius: 999px;
   padding: 2px;
-  background: conic-gradient(from 160deg, #f97316, #22c55e, #38bdf8, #a855f7, #f97316);
-  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.9);
+  background: conic-gradient(from 160deg, #f97316, #ef4444, #f97373, #facc15, #f97316);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.9);
 }
 
 .avatar-ring img {
@@ -124,8 +127,9 @@ h1 {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at top right, rgba(56, 189, 248, 0.15), transparent 55%),
-              radial-gradient(circle at bottom left, rgba(168, 85, 247, 0.15), transparent 55%);
+  background:
+    radial-gradient(circle at top right, rgba(248, 113, 113, 0.2), transparent 55%),
+    radial-gradient(circle at bottom left, rgba(127, 29, 29, 0.4), transparent 55%);
   opacity: 0.9;
   pointer-events: none;
 }
@@ -163,7 +167,7 @@ p {
   padding: 0.3rem 0.75rem;
   border-radius: 999px;
   background: var(--pill-bg);
-  border: 1px solid rgba(148, 163, 184, 0.4);
+  border: 1px solid rgba(248, 113, 113, 0.55);
   font-size: 0.8rem;
   color: var(--fg-muted);
 }
@@ -178,8 +182,9 @@ p {
 .log-entry {
   padding: 0.95rem 1rem 1.15rem;
   border-radius: 0.8rem;
-  background: radial-gradient(circle at top left, rgba(15, 23, 42, 0.98), rgba(15, 23, 42, 0.9));
-  border: 1px solid rgba(148, 163, 184, 0.28);
+  background:
+    linear-gradient(135deg, #020617, #0b0d12);
+  border: 1px solid rgba(248, 113, 113, 0.38);
 }
 
 .log-entry h3 {
